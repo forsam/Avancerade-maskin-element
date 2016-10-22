@@ -23,4 +23,4 @@ data = cleanTheData(data);
 % a surface that depends on Rpm and Torque!
 data.fuelCon.function = fit([data.Rpm.value', data.Torque.value'],-data.fuelCon.value100','poly22');
 data.BSFC.function =@(rpm,torque) 3600.*1000.*data.fuelCon.function(rpm,torque)./(torque.*rpm.*(pi/30));
-% Just be happpy with the F***** data!!
+
